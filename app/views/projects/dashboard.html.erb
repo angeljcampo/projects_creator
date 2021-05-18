@@ -1,0 +1,26 @@
+<%= render 'shared/navbar_dashboard'%>
+<h1 class=" text-center mt-2 container">Proyectos</h1>
+<div class="container">
+  <table class="table table-info">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @project.each do |project| %>
+      <tr>
+          <td><%=project.name%></td>
+          <td><%=project.description%></td>
+          <td><%=project.start_date%></td>
+          <td><%=project.end_date%></td>
+          <td><%=project.status%></td>
+      </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>
